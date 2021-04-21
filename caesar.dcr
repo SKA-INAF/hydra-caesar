@@ -11,11 +11,12 @@ RUN set -x \
    && rm -rf /var/lib/apt/lists/*
 
 # setup processing environment
-ARG home_dir
-ARG input_dir
-ARG processing_dir
-ARG output_dir
-ARG script
+ARG home_dir="/home/caesar"
+ARG input_dir="/home/caesar/data"
+ARG processing_dir="/home/caesar/processing"
+ARG output_dir="/home/caesar/results"
+ARG script="caesar.py"
+
 RUN set -x \
    && mkdir -p $home_dir \
    && mkdir -p $input_dir \
